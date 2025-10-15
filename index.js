@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 app.use(bodyParser.json());
 
@@ -30,6 +30,5 @@ app.post("/webhook", (req, res) => {
   res.sendStatus(200);
 });
 
-const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Webhook running on port ${PORT}`));
 
